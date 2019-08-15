@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider</title>
+    <link rel="stylesheet" href="slider.css">
+</head>
+
+<body>
+    <div class="slider">
+        <div class="next">&rang;</div>
+        <!--Next-->
+        <div class="pre">&lang;</div>
+        <!--Previous-->
+    </div>
+
+
+
+
+
+    <script>
+        const next = document.querySelector('.next');
+        const prev = document.querySelector('.pre');
+        const slider = document.querySelector('.slider');
+
+        let counter = 0;
+
+        next.addEventListener('click', ()=>{
+            //animate
+            slider.animate([{opacity:'0.1'},{opacity:'1.0'}],{duration: 1000, fill:'forwards', easing: 'ease-in-out'});
+
+            if(counter === 4){
+                counter = -1;
+            }
+
+            counter++;
+            slider.style.backgroundImage = `url(images/${counter}.jpg)`;
+        });
+        
+        prev.addEventListener('click', ()=>{
+            //animate
+            slider.animate([{opacity:'0.1'},{opacity:'1.0'}],{duration: 1000, fill:'forwards', easing: 'ease-in-out'});
+
+            if(counter === 0){
+                counter = 5;
+            }
+            counter--;
+            slider.style.backgroundImage = `url(images/${counter}.jpg`;
+        })
+    </script>
+</body>
+
+</html>

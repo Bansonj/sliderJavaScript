@@ -1,0 +1,55 @@
+.banner {
+    width: 1000px;
+    height: 500px;
+   
+    position: relative;
+}
+
+.slider{
+    width: 80%;
+    min-height: 500px;
+    position: relative;
+    background: url('http://www.banson.online/gallery/images/1.jpg');
+    background-size: cover;
+    margin: 80px auto;
+}
+
+.slider .next {
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    background-color: #1aaba5;
+    position: absolute;
+    top: 205px;
+    right: 0;
+    z-index: 99;
+    cursor: pointer;
+    opacity: .4;
+    transition: all .5s ease-out;
+}
+
+.slider .pre{
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    background-color: #1aaba5;
+    position: absolute;
+    top: 205px;
+    left: 0;
+    z-index: 99;
+    cursor: pointer;
+    opacity: .4;
+    transition: all .5s ease-out;
+}
+
+.slider:hover .next {
+    opacity: 1;
+}
+
+.slider:hover .pre {
+    opacity: 1;
+}
